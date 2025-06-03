@@ -255,7 +255,7 @@
   if(thisgeser==100){Tombol.style="";setTimeout(aksibalas,150);}
   }
 
-  async function inipesan(){nama = ";window.nama = nama;mulainama();}  
+  async function inipesan(){nama = "Kamu";window.nama = nama;mulainama();}  
 
   async function mulainama() {
     setTimeout(pgmuncul,200);
@@ -334,7 +334,7 @@
   tomnegatif = "Gamau";
   async function aksibalas(){
     var { isConfirmed: prtanya } = await swals.fire({
-      title: nama + 'Ehemm barakAllah fii Umrik, mau kado gak nih?🤭❤️',
+      title: 'Ehemm barakAllah fii Umrik, mau kado gak nih?🤭❤️',
       imageUrl: '' + fotostikerPopup.src, showCancelButton: true, confirmButtonText: '' + tompositif, cancelButtonText: '' + tomnegatif,});
     if(prtanya){
        await swals.fire({
