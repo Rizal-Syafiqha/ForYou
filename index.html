@@ -156,7 +156,7 @@
                 <p><b><img src="https://feeldreams.github.io/cilukba.gif"><br>
                         <span>Supaya ustadzah cepat sembuh, sehat dan bisa tersenyum kembali :)</span></b></p>
                 <p><b><img src="https://feeldreams.github.io/g5.gif"><br>
-                        <span class="ft">Kalau ustadzah sakit kan saya belum bisa temani dan belum suapin kalo mau makan hehe</span></b></p>
+                        <span class="ft">Kalau ustadzah sakit kan saya belum bisa temani dan belum bisa suapin kalo mau makan hehe</span></b></p>
                 <p><b><img src="https://feeldreams.github.io/mndkat.gif"><br>
                         <span>Terusss jangan makan pedes dulu ya</span></b></p>
             </div>
@@ -321,9 +321,9 @@
   function pgmuncul(){pergeseran.style="position:relative;opacity:1;transform:scale(1);";setTimeout(munculkembali,500)}
   function bqmuncul(){
     if(poinjwb==1){
-      katakata = kalimat.innerHTML;kalimat.innerHTML = "Mwhehehe kadonya nnti di bungkus";
+      katakata = kalimat.innerHTML;kalimat.innerHTML = "Sabar ya, nanti kadonya nyusul❤️";
     }else{
-      klganti.innerHTML="Yakin gamau kado??<br><br>";katakata = kalimat.innerHTML;kalimat.innerHTML = "";
+      klganti.innerHTML="Gak boleh gitu, harus ucapkan Alhamdulillah😂"<br><br>";katakata = kalimat.innerHTML;kalimat.innerHTML = "";
     }
     Content.style = "opacity:1;margin-top:8vh";fotostiker.style="display:none";pergeseran.style="display:none";Tombol.style="";bq.style = "position:relative;opacity:1;visibility:visible;margin-top:5vh;transform: scale(1);";
     setTimeout(kalimatakhir,200);ftganti=0;fthilang();
@@ -334,19 +334,19 @@
   tomnegatif = "Gamau";
   async function aksibalas(){
     var { isConfirmed: prtanya } = await swals.fire({
-      title: nama + ' Mau Kado Gak Nih? 🤭❤️',
+      title: nama + ' Ehemm barakAllah fii Umrik, mau kado gak nih?🤭❤️',
       imageUrl: '' + fotostikerPopup.src, showCancelButton: true, confirmButtonText: '' + tompositif, cancelButtonText: '' + tomnegatif,});
     if(prtanya){
        await swals.fire({
          title: 'Zonkkkkk:)', 
-         html: 'Maaf seng gada kado maupun hadiah karena aku belum mampu😌', 
+         html: 'Anda kurang beruntung silahkan coba lagi, becanda ustadzah yg sholihah😅', 
          imageUrl: '' + fotostikerPopupCon.src,
        });
        poinjwb=1;
     } else {
              await swals.fire({
          title: 'Yaaahh!', 
-         html: 'Yaudah kalo gamau mah, emang gada kado sih', 
+         html: 'Kalo gamau berarti kebalikannya😝', 
          imageUrl: '' + fotostikerPopupCan.src,
        });
        poinjwb=2;
