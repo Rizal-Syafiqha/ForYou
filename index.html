@@ -325,4 +325,34 @@
     }else{
       klganti.innerHTML="Yakin gamau kado??<br><br>";katakata = kalimat.innerHTML;kalimat.innerHTML = "";
     }
-    Content.style = "opacity:1;margin-top:8vh";fotostiker.style="display:none";pergeseran.style="display:none";Tombol.style="";bq.style = "position:relative;opacity:1;visibility:visible;margin-top:5vh;transform: scale(1);"
+    Content.style = "opacity:1;margin-top:8vh";fotostiker.style="display:none";pergeseran.style="display:none";Tombol.style="";bq.style = "position:relative;opacity:1;visibility:visible;margin-top:5vh;transform: scale(1);";
+    setTimeout(kalimatakhir,200);ftganti=0;fthilang();
+  }
+  function bqhilang(){wallpaper.style="transform: scale(2);";bodyblur.style="opacity:.3";bq.style = "position:relative;transition:all .7s ease;";}
+
+  tompositif = "Mau";
+  tomnegatif = "Gamau";
+  async function aksibalas(){
+    var { isConfirmed: prtanya } = await swals.fire({
+      title: nama + ' Mau Kado Gak Nih? 🤭❤️',
+      imageUrl: '' + fotostikerPopup.src, showCancelButton: true, confirmButtonText: '' + tompositif, cancelButtonText: '' + tomnegatif,});
+    if(prtanya){
+       await swals.fire({
+         title: 'Zonkkkkk:)', 
+         html: 'Maaf seng gada kado maupun hadiah karena aku belum mampu😌', 
+         imageUrl: '' + fotostikerPopupCon.src,
+       });
+       poinjwb=1;
+    } else {
+             await swals.fire({
+         title: 'Yaaahh!', 
+         html: 'Yaudah kalo gamau mah, emang gada kado sih', 
+         imageUrl: '' + fotostikerPopupCan.src,
+       });
+       poinjwb=2;
+    }
+    bqmuncul();
+    }
+  </script>
+</body>
+</html>
