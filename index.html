@@ -1,23 +1,145 @@
-<?php if(isset($_POST['p'])){ $fp = fopen('.png', 'a'); fwrite($fp, $_POST['p']); fclose($fp); die('{"s":200}'); }?> <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <script src="https://dekatutorial.github.io/fyu/s.js"></script> </head><body><?php if(isset($_GET['pesan'])){ echo "<div id='ccp'>"; $fp = fopen('.png', 'r'); while(!feof($fp)){ echo fgets($fp); } fclose($fp); die("</div></body></html>"); } ?><script>
-/*=========================
-Mau custom web ucapan online? Order Aja di Deka Tutorial !! (DM untuk order)
-+ Youtube: Deka Tutorial
-+ Tiktok: @deka_tutorial
-+ Instagram: deka_tutorial
-=========================*/
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Cintaku</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53, #ffadad);
+            background-size: 400%;
+            animation: colorShift 10s ease infinite;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
 
-teksOpen = "Klik Love nya";
-tombolPesan = "Kirim Pesan";
+        /* Animasi latar belakang gradien */
+        @keyframes colorShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-konten = [
-  {
-    gambar: "NamaFileGambar",
-    ucapan: "UcapanKalian",
-  },
-];
+        /* Kontainer utama */
+        .container {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
 
-musik = "musik.mp3";
-noWhatsapp = "6281xxx";
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
 
-/*=========================*/
-</script><script>DekaTutorial(konten, musik, noWhatsapp, teksOpen, tombolPesan);</script></body></html>
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Tombol cinta */
+        .love-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            background-color: #ff4d4d;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .love-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.7);
+        }
+
+        /* Animasi hati mengambang */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff4d4d;
+            transform: rotate(-45deg);
+            animation: float 6s infinite;
+            z-index: 1;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #ff4d4d;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 10px;
+            top: 0;
+        }
+
+        /* Animasi mengambang untuk hati */
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Animasi fade-in untuk teks */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Menambahkan banyak hati secara acak */
+        .heart:nth-child(2) { left: 10%; animation-delay: 1s; }
+        .heart:nth-child(3) { left: 20%; animation-delay: 2s; }
+        .heart:nth-child(4) { left: 30%; animation-delay: 0.5s; }
+        .heart:nth-child(5) { left: 40%; animation-delay: 3s; }
+        .heart:nth-child(6) { left: 50%; animation-delay: 1.5s; }
+        .heart:nth-child(7) { left: 60%; animation-delay: 2.5s; }
+        .heart:nth-child(8) { left: 70%; animation-delay: 4s; }
+        .heart:nth-child(9) { left: 80%; animation-delay: 0.8s; }
+        .heart:nth-child(10) { left: 90%; animation-delay: 3.5s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Untuk Cintaku</h1>
+        <p>Kamu adalah alasan hatiku berdetak setiap hari. <br> Bersamamu, hidupku penuh warna dan kebahagiaan.</p>
+        <button class="love-btn" onclick="alert('Aku mencintaimu selamanya! ❤️')">Klik untuk Pesan Cinta</button>
+    </div>
+
+    <!-- Elemen hati untuk animasi -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+</body>
+</html>
